@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Book Cafe</title>
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link
+    href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap)"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="[cdnjs.cloudflare.com](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css)"
+  >
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="coffee-loader">
+      <div class="book-icon">📚</div>
+      <p>Loading Smart Book Cafe...</p>
+    </div>
+  </div>
+
+  <button class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">📚 Smart Book Cafe</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="#" class="btn btn-outline">Login/Register</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <h1>Welcome to Smart Book Cafe</h1>
+        <p>Discover, Read, and Purchase Your Favorite Books Anytime</p>
+        <div class="hero-buttons">
+          <a href="books.html" class="btn btn-primary">Explore Books</a>
+          <a href="books.html#free-books" class="btn btn-secondary">Read for Free</a>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section categories" id="categories">
+      <div class="section-header reveal">
+        <span class="section-tag">Browse Genres</span>
+        <h2>Featured Categories</h2>
+      </div>
+
+      <div class="category-grid">
+        <div class="category-card reveal"><i class="fas fa-feather"></i><h3>Fiction</h3></div>
+        <div class="category-card reveal"><i class="fas fa-laptop-code"></i><h3>Technology</h3></div>
+        <div class="category-card reveal"><i class="fas fa-flask"></i><h3>Science</h3></div>
+        <div class="category-card reveal"><i class="fas fa-landmark"></i><h3>History</h3></div>
+        <div class="category-card reveal"><i class="fas fa-chart-line"></i><h3>Business</h3></div>
+        <div class="category-card reveal"><i class="fas fa-book-open"></i><h3>Novels</h3></div>
+        <div class="category-card reveal"><i class="fas fa-graduation-cap"></i><h3>Education</h3></div>
+      </div>
+    </section>
+
+    <section class="section books-preview">
+      <div class="section-header reveal">
+        <span class="section-tag">Readers' Picks</span>
+        <h2>Popular Books Preview</h2>
+      </div>
+
+      <div class="books-grid">
+        <div class="book-card reveal">
+          <img src="[images.unsplash.com](https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=500&q=80)" alt="Rich Dad Poor Dad">
+          <div class="book-info">
+            <h3>Rich Dad Poor Dad</h3>
+            <p class="author">Robert T. Kiyosaki</p>
+            <div class="book-meta">
+              <span>₹299</span>
+              <span><i class="fas fa-star"></i> 4.7</span>
+            </div>
+            <a href="books.html" class="btn btn-primary small-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="book-card reveal">
+          <img src="[images.unsplash.com](https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=500&q=80)" alt="Atomic Habits">
+          <div class="book-info">
+            <h3>Atomic Habits</h3>
+            <p class="author">James Clear</p>
+            <div class="book-meta">
+              <span>₹399</span>
+              <span><i class="fas fa-star"></i> 4.9</span>
+            </div>
+            <a href="books.html" class="btn btn-primary small-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="book-card reveal">
+          <img src="[images.unsplash.com](https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=500&q=80)" alt="The Psychology of Money">
+          <div class="book-info">
+            <h3>The Psychology of Money</h3>
+            <p class="author">Morgan Housel</p>
+            <div class="book-meta">
+              <span>₹349</span>
+              <span><i class="fas fa-star"></i> 4.8</span>
+            </div>
+            <a href="books.html" class="btn btn-primary small-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="book-card reveal">
+          <img src="[images.unsplash.com](https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=500&q=80)" alt="Clean Code">
+          <div class="book-info">
+            <h3>Clean Code</h3>
+            <p class="author">Robert C. Martin</p>
+            <div class="book-meta">
+              <span>₹599</span>
+              <span><i class="fas fa-star"></i> 4.9</span>
+            </div>
+            <a href="books.html" class="btn btn-primary small-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="book-card reveal">
+          <img src="[images.unsplash.com](https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=500&q=80)" alt="JavaScript Essentials">
+          <div class="book-info">
+            <h3>JavaScript Essentials</h3>
+            <p class="author">David Miller</p>
+            <div class="book-meta">
+              <span>Free</span>
+              <span><i class="fas fa-star"></i> 4.6</span>
+            </div>
+            <a href="books.html" class="btn btn-primary small-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="book-card reveal">
+          <img src="[images.unsplash.com](https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=500&q=80)" alt="Python Programming">
+          <div class="book-info">
+            <h3>Python Programming</h3>
+            <p class="author">Mark L. Pearson</p>
+            <div class="book-meta">
+              <span>₹499</span>
+              <span><i class="fas fa-star"></i> 4.7</span>
+            </div>
+            <a href="books.html" class="btn btn-primary small-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section stats">
+      <div class="section-header reveal">
+        <span class="section-tag">Community Growth</span>
+        <h2>Smart Book Cafe in Numbers</h2>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <h3 class="counter" data-target="1000">0</h3>
+          <p>Total Books</p>
+        </div>
+        <div class="stat-card reveal">
+          <h3 class="counter" data-target="5000">0</h3>
+          <p>Active Readers</p>
+        </div>
+        <div class="stat-card reveal">
+          <h3 class="counter" data-target="300">0</h3>
+          <p>Free Books</p>
+        </div>
+        <div class="stat-card reveal">
+          <h3 class="counter" data-target="700">0</h3>
+          <p>Purchased Books</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="about-wrapper">
+        <div class="about-text reveal">
+          <span class="section-tag">About Us</span>
+          <h2>Your Digital Reading Corner</h2>
+          <p>
+            Smart Book Cafe blends the calm charm of a modern reading cafe with the convenience
+            of an online bookstore. Explore bestselling titles, discover new authors, and enjoy
+            free learning resources in one beautifully designed space.
+          </p>
+        </div>
+        <div class="about-card reveal">
+          <i class="fas fa-mug-hot"></i>
+          <h3>Read, Relax, Repeat</h3>
+          <p>
+            Built for book lovers, students, and curious minds who want a premium reading experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="section-header reveal">
+        <span class="section-tag">Testimonials</span>
+        <h2>What Our Readers Say</h2>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card reveal">
+          <p>"A beautiful platform for discovering books. The cafe-inspired design feels warm and premium."</p>
+          <h4>Priya Sharma</h4>
+        </div>
+        <div class="testimonial-card reveal">
+          <p>"I love the clean layout, smooth browsing, and the free reading options for tech books."</p>
+          <h4>Rahul Mehta</h4>
+        </div>
+        <div class="testimonial-card reveal">
+          <p>"Smart Book Cafe feels like a modern online library with the charm of a cozy bookstore."</p>
+          <h4>Ananya Verma</h4>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-grid">
+      <div>
+        <h3>📚 Smart Book Cafe</h3>
+        <p>Your warm digital bookstore and reading cafe experience.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Smart Book Cafe. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

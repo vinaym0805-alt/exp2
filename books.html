@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Books - Smart Book Cafe</title>
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link
+    href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap)"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="[cdnjs.cloudflare.com](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css)"
+  >
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="coffee-loader">
+      <div class="book-icon">📚</div>
+      <p>Loading Books...</p>
+    </div>
+  </div>
+
+  <button class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <header class="sub-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">📚 Smart Book Cafe</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html" class="active">Books</a></li>
+        <li><a href="index.html#categories">Categories</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="#" class="btn btn-outline">Login/Register</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="page-banner reveal">
+      <h1>Explore Our Book Collection</h1>
+      <p>Find premium reads, free resources, and your next favorite title.</p>
+    </div>
+  </header>
+
+  <main class="books-page">
+    <section class="filters-section reveal">
+      <div class="filters-grid">
+        <div class="filter-box">
+          <label for="searchInput">Search Books</label>
+          <input type="text" id="searchInput" placeholder="Search by book name..." />
+        </div>
+
+        <div class="filter-box">
+          <label for="categoryFilter">Category</label>
+          <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="Business">Business</option>
+            <option value="Self Help">Self Help</option>
+            <option value="Finance">Finance</option>
+            <option value="Programming">Programming</option>
+            <option value="Web Development">Web Development</option>
+          </select>
+        </div>
+
+        <div class="filter-box">
+          <label for="priceFilter">Price</label>
+          <select id="priceFilter">
+            <option value="all">All Prices</option>
+            <option value="free">Free</option>
+            <option value="under400">Under ₹400</option>
+            <option value="400to600">₹400 - ₹600</option>
+            <option value="above600">Above ₹600</option>
+          </select>
+        </div>
+
+        <div class="filter-box">
+          <label for="sortFilter">Sort By</label>
+          <select id="sortFilter">
+            <option value="default">Default</option>
+            <option value="lowToHigh">Price Low to High</option>
+            <option value="highToLow">Price High to Low</option>
+            <option value="popularity">Popularity</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="section books-list-section" id="free-books">
+      <div class="books-grid" id="booksContainer"></div>
+    </section>
+  </main>
+
+  <div class="modal" id="purchaseModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closePurchaseModal">&times;</button>
+      <h2>Purchase Book</h2>
+      <p><strong>Book:</strong> <span id="purchaseBookName"></span></p>
+      <p><strong>Price:</strong> <span id="purchaseBookPrice"></span></p>
+      <button class="btn btn-primary full-btn">Buy Now</button>
+    </div>
+  </div>
+
+  <div class="modal" id="readModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeReadModal">&times;</button>
+      <h2>Read Free</h2>
+      <p><strong id="readBookTitle">Read Online</strong></p>
+      <div class="read-box">
+        <p>This free book is available for online reading and PDF download.</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary">Read Online</a>
+          <a href="#" class="btn btn-secondary">Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>📚 Smart Book Cafe</h3>
+        <p>Explore books in a beautiful modern reading cafe experience.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Social Media</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Smart Book Cafe. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
